@@ -30,7 +30,7 @@ const $c = (x) => document.getElementsByClassName(x);
 
 
 
-$i("input1").addEventListener("submit", function (e) {
+$i("input1").addEventListener("change", function (e) {
     var rx = new RegExp(/"(.+?)"\W+(STEAM\S+)\W+\d+:\d+\W+(\d+)/gs);
 
     var mensaje = `${e.target.value}`
