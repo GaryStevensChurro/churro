@@ -1,0 +1,321 @@
+* {
+    margin: 0;
+}
+
+img {
+    width: 50%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    font-family: Montserrat;
+    background: #383749;
+}
+
+tbody {
+    text-align: center;
+}
+
+.text-input {
+    position: relative;
+    width: 100%;
+    /* transition: all 1s cubic-bezier(0.98, 0.02, 1, 1); */
+    /* transform: translateY(-100%); */
+    /* margin: 0; */
+    /* margin-top: 50px; */
+}
+
+span.big-style {
+    font-family: monospace;
+    background-color: #e2e2e2;
+    /* border-radius: 5px; */
+    /* padding: 2px; */
+    display: block;
+}
+
+.mini {
+    font-size: 0.8em;
+}
+
+.small {
+    font-size: 0.5em;
+}
+
+span.year-style {
+    /* display: block; */
+    background-color: #000000;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.text-input input[type=text] {
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    outline: none;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    padding: 10px 10px 10px 10px;
+    transition: all 0.1s ease-out;
+}
+
+.text-input input[type=text]+label {
+    position: absolute;
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 40px;
+    line-height: 40px;
+    color: white;
+    border-radius: 3px 0 0 3px;
+    background: #E03616;
+    transform: translateZ(0) translateX(0);
+    transition: all 0.3s ease-in;
+    transition-delay: 0.2s;
+}
+
+.text-input input[type=text]:focus+label {
+    transform: translateY(-120%) translateX(0%);
+    border-radius: 3px;
+    transition: all 0.1s ease-out;
+}
+
+.text-input input[type=text]:focus {
+    padding: 10px;
+    transition: all 0.3s ease-out;
+    transition-delay: 0.2s;
+}
+
+.jugador-preview {
+    background: black;
+    border-radius: 5px;
+    margin: 6px;
+    display: inline-block;
+}
+
+.jugador-preview p {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.jugador-preview a {
+    text-decoration: none;
+    color: white;
+}
+
+.selected-preview-player {
+    background: rgb(112, 132, 211);
+    color: white;
+}
+
+input.boton-proceder {
+    padding: 20px;
+    background: aquamarine;
+    border-radius: 15px;
+}
+
+
+input.boton-proceder:hover {
+    background-color: #d7d7d7;
+
+}
+
+.prohibido {
+    background-color: #6a0000 !important;
+    color: white;
+    padding: 4px;
+}
+
+.csgoprofile {
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 17px;
+}
+
+a.csgoprofile {
+    color: white;
+    text-decoration: none;
+    cursor: help;
+}
+
+a.jugador-name {
+    text-decoration: none;
+    color: #000000;
+    cursor: help;
+    display: block;
+    text-decoration: none;
+    font-size: 1.3em;
+}
+
+.kdratio {
+    font-size: 1.5em;
+    padding: 10px;
+    font-style: normal;
+}
+
+.valor-cuenta {
+    font-size: 1.5em;
+}
+
+.error {
+    cursor: pointer;
+}
+
+:root {
+    --equipoa: rgb(166 146 122);
+    --equipob: rgb(141 171 158);
+}
+
+table.tableizer-table {
+    /* position: absolute; */
+    font-family: sans-serif;
+    font-size: 1em;
+    /* padding: 5px; */
+    /* top: 70px; */
+    /* background-color: #000000; */
+    /* padding: 10px; */
+    /* border-radius: 10px; */
+}
+
+.tableizer-table td {
+    /* border: 5px solid #000000; */
+    color: black;
+    /* margin: 26px; */
+    /* border-radius: 10px; */
+}
+
+.tableizer-table th {
+    background-color: #000000;
+    color: #FFF;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 10px 10px 0 0;
+}
+
+tr:nth-child(1) td {
+    background: var(--equipoa);
+}
+
+tr:nth-child(2) td {
+    background: var(--equipoa);
+}
+
+tr:nth-child(3) td {
+    background: var(--equipoa);
+}
+
+tr:nth-child(4) td {
+    background: var(--equipoa);
+}
+
+tr:nth-child(5) td {
+    background: var(--equipoa);
+}
+
+tr:nth-child(6) td {
+    background: var(--equipob);
+}
+
+tr:nth-child(7) td {
+    background: var(--equipob);
+}
+
+tr:nth-child(8) td {
+    background: var(--equipob);
+}
+
+tr:nth-child(9) td {
+    background: var(--equipob);
+}
+
+tr:nth-child(10) td {
+    background: var(--equipob);
+}
+
+.csgo-profile {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+.csgo-updated {
+    font-size: 0.9em;
+    color: #005b93;
+}
+
+.horas-counter {
+    display: block;
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.ver {
+    display: none;
+}
+
+.expandir {
+    width: 100px;
+}
+
+abbr[title] {
+    text-decoration: none;
+}
+
+.rank {
+    width: 122px;
+    height: 50px;
+
+}
+
+.grey {
+    filter: grayscale(100%);
+}
+
+.flexible {
+    display: flex;
+    justify-content: space-around;
+}
+
+button.btn {
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    background: #464646;
+}
+
+img.order {
+    width: 100%;
+    position: relative;
+    top: 0;
+    height: 100%;
+    left: 0;
+}
+
+.enabled {
+    background: #98c7a0 !important;
+}
+
+.A {
+    background: rgb(40, 119, 85);
+    ;
+    display: flex;
+    justify-content: center;
+}
+
+.B {
+    background: rgb(0, 91, 147);
+    ;
+    display: flex;
+    justify-content: center;
+}

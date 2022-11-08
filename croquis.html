@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo-version-estatus.css">
+</head>
+
+<body>
+    <div class="text-input">
+        <input type="text" id="input1" placeholder="paste here..." value=''>
+        <label for="input1">Status</label>
+    </div>
+
+   <div class="text-input">
+        <input type="text" placeholder="status">
+        <input type="button" value="PEGAR" id="pegar">
+   </div>
+
+   <style>
+        input[type=button] {
+            display: none;
+            position: absolute;
+            right: 0;
+            height: 100%;
+            background: rgb(39, 177, 182);
+        }
+   </style>
+
+    <div class="players-preview"></div>
+
+    <div class="readyornot" style="display: none;">
+        <input type="button" value="PROCEDER" class="boton-proceder" style="margin: auto;" onclick="obtenerdata()">
+    </div>
+
+
+    <table class="tableizer-table" style="display:none;">
+        <thead>
+            <!-- CABEZA DE LA TABLA -->
+            <tr class="tableizer-firstrow">
+                <th>Player<br><span class="mini">Numero</span></th>
+                <th>Nivel<br><span class="mini">Steam</span></th>
+                <th>Nombre<br><span class="mini">Steam</span></th>
+                <th>Avatar<br><span class="mini">Steam</span></th>
+                <th>Horas<br><span class="mini">COUNTER</span></th>
+                <th colspan="2">Rango<br><span class="mini">COUNTER</span></th>
+                <th>KDR<br><span class="mini">TODO</span></th>
+                <th>KDR<br><span class="mini">MES</span></th>
+                <th colspan="5">Patidas previas</th>
+            </tr>
+        </thead>
+        <tbody class="table-rows"></tbody>
+        <tfoot>
+            <!-- PIE DE LA TABLA -->
+            <tr class="tableizer-firstrow">
+                <th id="btn1" class="btn" style="border-radius: 0 0 10px 10px"><button class="btn" onclick="sortTable(0,this)"><img
+                            class="order" src="order.svg" alt=""></button></th>
+                <th colspan="3" style="background-color: transparent; "></th>
+                <th style="border-radius: 0 0 0 10px">MEDIA</th>
+                <th style="border-radius: 0" id="mediaA"></th>
+                <th style="border-radius: 0 0 10px 0" id="mediaB"></th>
+                <th id="btn2" class="btn" style="border-radius: 0 0 10px 10px">
+                    <button class="btn" onclick="sortTable(7, this)"><img
+                            class="order" src="order.svg" alt=""></button></th>
+                <th id="btn3" class="btn" style="border-radius: 0 0 10px 10px">
+                    <button class="btn" onclick="sortTable(8, this)"><img
+                            class="order" src="order.svg" alt=""></button></th>
+                <th style="border-radius: 0 0 10px 10px" colspan="5">
+                    <div id="btn4" class="flexible">
+                        <button class="btn" onclick="getMatchDataInfo('info', this)">INFO</button>
+                        <button class="btn" onclick="getMatchDataInfo('kdr', this)">KDR</button>
+                        <button class="btn" onclick="getMatchDataInfo('adr', this)">ADR</button>
+                        <button class="btn" onclick="getMatchDataInfo('hs', this)">HS</button>
+                        <button class="btn" onclick="getMatchDataInfo('hltv', this)">HLTV</button>
+
+                    </div>
+                </th>
+            </tr>
+        </tfoot>
+    </table>
+
+    <script src="croquis.js"></script>
+</body>
+
+</html>
