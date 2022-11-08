@@ -29,22 +29,6 @@ const $c = (x) => document.getElementsByClassName(x);
 })();
 
 
-if (navigator.clipboard) {
-    $i("pegar").style.display = "inline"
-    $i("pegar").addEventListener("click", function(){
-        navigator.clipboard.readText().then( t => {
-            $i("input1").value =  t;
-            leerPlayers();
-        })
-        .catch(error => {
-            console.log("error:", error);
-        })
-    })
-}
-else {
-    console.log("no tiene");
-}
-
 
 $i("input1").addEventListener("submit", function (e) {
     var rx = new RegExp(/"(.+?)"\W+(STEAM\S+)\W+\d+:\d+\W+(\d+)/gs);
